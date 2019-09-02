@@ -1,0 +1,63 @@
+[global_config]
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[Nouvel agencement]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 4c8e6325-f66a-442c-91ae-65805fcc4928
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 54:30
+      size = 1866, 1016
+      title = jc@jc-pc:~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 456
+      ratio = 0.451038575668
+      type = VPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 932
+      ratio = 0.50080601827
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 4c8e6325-f66a-442c-91ae-65805fcc4928
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = aa07c7b8-d2fe-4c3c-b108-db6b0f9251eb
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = f6d9a251-2eb2-40ec-99d7-424db11204cb
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.23
+    cursor_color = "#aaaaaa"
+    foreground_color = "#839496"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_theme_colors = True
