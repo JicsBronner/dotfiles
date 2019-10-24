@@ -106,8 +106,6 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+ampersand workspace $ws1
-bindsym $mod+eacute workspace $ws2
 bindsym $mod+quotedbl workspace $ws3
 bindsym $mod+apostrophe workspace $ws4
 bindsym $mod+parenleft workspace $ws5
@@ -118,8 +116,6 @@ bindsym $mod+ccedilla workspace $ws9
 bindsym $mod+agrave workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+eacute move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
@@ -170,14 +166,27 @@ bindsym $mod+r mode "resize"
 
 font pango:DejaVu 13
 #font pango:NotoSans 13
+#
+
+set $tag1 "1:"
+set $tag2 "2:"
+
+exec --no-startup-id i3-msg 'workspace $tag1; exec /usr/bin/termite'
+exec --no-startup-id i3-msg 'workspace   $tag2; exec /usr/bin/firefox'
+#-------------------------------ASSIGN-------------------------------
+bindsym $mod+ampersand workspace $tag1
+bindsym $mod+eacute workspace $tag2
+
+bindsym $mod+Shift+1 move container to workspace $tag1
+bindsym $mod+Shift+2 move container to workspace $tag2
 
 #windo style
 for_window [class=".*"] border pixel 0
-gaps inner 5
+gaps inner 0
 gaps outer 0
 
 #exec conky with custom conf
-exec conky -c ~/.config/conky/conky.conf
+# exec conky -c ~/.config/conky/conky.conf
 
 #trying to create an alias of < and > char for my keyboard
 bindsym Shift+Next exec bash -c "xvkbd -xsendevent -utf16 -file ~/.config/i3/next_key"
@@ -217,36 +226,58 @@ bindsym --release Print exec "scrot -m '$HOME/Images/screenshots/%s_%H%M_%d.%m.%
 bindsym --release Shift+Print exec "scrot -s '$HOME/Images/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
 bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '$HOME/Images/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
 
+# window color configuration
+# window colors         border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff0
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
 ############################################################################################
 #                                     I3_BAR CONFIG
 ############################################################################################
 
 #defining colors
-set $bg-color 	         #2f343f
+set $bg-color 	         #263238
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
-
-# window colors         border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 # bar
 bar {
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
     position top
     colors {
-      background $bg-color
-        set $border #222D32
+        background $bg-color
+        set $border #eceff1
         separator #757575
-
-        #                  border             background         text
+        #order             background         text
         focused_workspace  $border            #CFD8DC            #000000
         inactive_workspace $border            #CFD8DC            $inactive-text-color
         urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
     }
 }
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#bar {
+#  colors{ 
+#
+#      background $bg-color
+#      set $border #222D32
+#      separator #757575
+#
+##     border             background         text
+#      focused_workspace  $border            #CFD8DC            #000000
+#      inactive_workspace $border            #CFD8DC            $inactive-text-color
+#      urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#  }
+#
+#  workspace_buttons yes
+#  strip_workspace_numbers yes
+#  separator_symbol " "
+#  status_command $HOME/.config/i3/i3-bar.sh
+#  position top
+#}
 
