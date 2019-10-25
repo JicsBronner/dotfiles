@@ -24,7 +24,10 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     bootstrap_before = "myspacevim#before"
-    vimcompatible = true
+    bootstrap_after = "myspacevim#after"
+    enable_neomake = false
+    enable_ale = true
+    project_rooter_automatically = 0
 
 # Enable autocomplete layer
 [[layers]]
@@ -42,32 +45,18 @@ name = "colorscheme"
 
 [[layers]]
 name = "lang#c"
-clang_executable = "/usr/bin/clang"
-  [layer.clang_std]
-    c = "c11"
-    cpp = "c++1z"
-    objc = "c11"
-    objcpp = "c++1z"
-
 
 [[layers]]
 name = "format"
 
 [[layers]]
 name = "tags"
-gtagslabel = "ctags"
-
-[[layers]]
-name = "gtags"
-gtabslabel = "ctags"
 
 [[layers]]
 name = "fzf"
 
 [[layers]]
+name = "cscope"
+
+[[layers]]
 name = "checkers"
-enable_neomake = false
-enable_ale = true
-
-
-
