@@ -1,0 +1,7 @@
+envoyer dans un autre pane ou ajouter depuis un pane : <pref> + e et <pref> + r
+sauvegarder session : <pref> + ctrl + s 
+restorer session : <pref> + ctrl + r
+recharger la conf : <pref> + p 
+recharger les modules : <pref> + I
+menu des sessions : <pref> + s --> depuis ce menu : supprimer session avec x, ajouter une nouvelle avec :new
+renommer une session : <pref> + $ 
