@@ -1,0 +1,1 @@
+apt install curl bear libblas-dev liblapack-dev clang-tools-7 clang-tools-6.0 cscope exuberant-ctags colordiff meld pylint ffmpeg silversearcher-ag 
