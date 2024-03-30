@@ -1,0 +1,76 @@
+[global_config]
+  focus = mouse
+  handle_size = 1
+  borderless = True
+  broadcast_default = off
+  title_transmit_fg_color = "#233857"
+  title_transmit_bg_color = "#233857"
+  title_receive_fg_color = "#0f213c"
+  title_receive_bg_color = "#0f213c"
+  title_inactive_fg_color = "#0f213c"
+  title_inactive_bg_color = "#0f213c"
+  inactive_color_offset = 1.0
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+  title_use_system_font = False
+[keybindings]
+  new_tab = <Primary>Menu
+  move_tab_right = <Primary>Page_Down
+  move_tab_left = <Primary>Page_Up
+  next_tab = <Shift><Alt>Right
+  prev_tab = <Shift><Alt>Left
+  broadcast_group = <Shift><Alt>percent
+  broadcast_all = <Shift><Alt>sterling
+  previous_profile = <Primary><Shift>Up
+  help = <Alt>q
+[profiles]
+  [[default]]
+    background_color = "#eff1f5"
+    cursor_color = "#dc8a78"
+    foreground_color = "#4c4f69"
+    show_titlebar = False
+    palette = "#5c5f77:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#acb0be:#6c6f85:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#bcc0cc"
+    background_image = None
+    scrollbar_position = hidden
+    scroll_on_output = True
+    scrollback_infinite = True
+  [[SolarizedLight]]
+    urgent_bell = True
+    background_color = "#ffffff"
+    background_darkness = 0.91
+    cursor_color = "#aaaaaa"
+    foreground_color = "#000000"
+    scrollbar_position = hidden
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#2e3436:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#f6f5f4"
+  [[black]]
+    background_color = "#303446"
+    cursor_color = "#f2d5cf"
+    foreground_color = "#c6d0f5"
+    show_titlebar = False
+    palette = "#51576d:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#b5bfe2:#626880:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#a5adce"
+    background_image = None
+  [[Catppuccin_Macchiato]]
+    background_color = "#24273a"
+    cursor_color = "#f4dbd6"
+    foreground_color = "#cad3f5"
+    show_titlebar = False
+    palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#a5adcb"
+    background_image = None
+  [[Catppuccin_Mocha]]
+    background_color = "#1e1e2e"
+    cursor_color = "#cdd6f4"
+    foreground_color = "#cdd6f4"
+    show_titlebar = False
+    palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
+    background_image = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
